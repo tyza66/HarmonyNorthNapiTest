@@ -1,0 +1,55 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "storeFile": "D:/Environment/oh_key.p12",
+          "storePassword": "0000001A0518586CFFC7C18673B0E06461C95AD94318CF61E90C0D3953EF93784D5FA431B25F2E4E0AD4",
+          "keyAlias": "oh_key",
+          "keyPassword": "0000001A8127BE9A4AB88BB8AAB9BC614A8320DA83DBD8848C446B62E1DC4C6951C25713100332B3A714",
+          "signAlg": "SHA256withECDSA",
+          "profile": "D:/Environment/napi_testDebug.p7b",
+          "certpath": "D:/Environment/napi_test.cer"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.0.1(13)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
